@@ -1,27 +1,22 @@
 name: CI/CD
 
 on:
-
-push:
-
-branches:
-
-- main
+  push:
+    branches:
+      - main
 
 jobs:
-
-build:
-
+  build:
     runs-on: ubuntu-latest
-
     name: Check Lint and Test
-
+    
     steps:
+      - uses: actions/checkout@v3
 
-    - uses: actions/checkout@v3
+      - uses: bahmutov/npm-install@v1
 
-    - uses: bahmutov/npm-install@v1
+      # Run ESLint
+      - run: npm run lint
 
-    - run: npm run lint (Run ESLint)
-
-    - run: npm run test (Run Jest)
+      # Run Jest
+      - run: npm run test
