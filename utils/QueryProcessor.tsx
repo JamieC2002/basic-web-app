@@ -7,5 +7,12 @@ export default function QueryProcessor(query: string): string {
     );
   }
 
+  // Need to run npm run build after making changes.
+  if (query.toLowerCase().includes("what is your andrew id?")) {
+    return (
+      "Your Andrew ID is jiaming3"
+    );
+  }
+
   return "";
 }
