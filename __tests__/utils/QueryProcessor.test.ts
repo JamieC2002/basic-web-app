@@ -25,4 +25,8 @@ describe("QueryProcessor", () => {
             "Your Andrew ID is jiaming3"
         ));
     })
+
+    test('should answer name', () => {
+        expect(QueryProcessor('What is your name?')).toEqual("jc");
+    })
 });
