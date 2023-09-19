@@ -29,4 +29,12 @@ describe("QueryProcessor", () => {
     test('should answer name', () => {
         expect(QueryProcessor('What is your name?')).toEqual("jc");
     })
+
+    test('test max of three numbers', () => {
+        expect(QueryProcessor('Which of the following numbers is the largest: 86, 2, 53?')).toEqual("86");
+    })
+
+    test('test addition', () => {
+        expect(QueryProcessor('What is 97 plus 64?')).toEqual("161");
+    })
 });
